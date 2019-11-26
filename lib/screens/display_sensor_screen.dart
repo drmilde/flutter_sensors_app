@@ -32,9 +32,9 @@ class _DisplaySensorScreenState extends State<DisplaySensorScreen> {
   void initState() {
     accelerometerEvents.listen((AccelerometerEvent event) {
       setState(() {
-        _acc_x = event.x.toString();
-        _acc_y = event.y.toString();
-        _acc_z = event.z.toString();
+        _acc_x = event.x.toStringAsFixed(2);
+        _acc_y = event.y.toStringAsFixed(2);
+        _acc_z = event.z.toStringAsFixed(2);
       });
     });
 // [AccelerometerEvent (x: 0.0, y: 9.8, z: 0.0)]
